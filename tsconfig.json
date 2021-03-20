@@ -11,6 +11,35 @@
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "es2015",
+    "paths": {
+      "assets": [
+        "src/app/assets/index.ts"
+      ],
+      "state": [
+        "src/app/store/state/index.ts"
+      ],
+      "reducers": [
+        "src/app/store/reducers/index.ts"
+      ],
+      "actions": [
+        "src/app/store/actions/index.ts"
+      ],
+      "shared": [
+        "src/app/shared/index.ts"
+      ],
+      "pages": [
+        "src/app/components/pages.ts"
+      ],
+      "components": [
+        "src/app/components/index.ts"
+      ],
+      "services": [
+        "src/app/services/index.ts"
+      ],
+      "models": [
+        "src/app/shared/models/index.ts"
+      ],
+    },
     "module": "es2020",
     "lib": [
       "es2018",

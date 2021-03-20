@@ -1,0 +1,21 @@
+import { Component, OnInit } from '@angular/core';
+import { User } from 'models'
+
+@Component({
+  selector: 'app-sign-up',
+  templateUrl: './sign-up.component.html',
+  styleUrls: ['./sign-up.component.scss']
+})
+export class SignUpComponent implements OnInit {
+
+  user: User = new User();
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+  onSubmit(): void {
+    console.log(this.user);
+  }
+}
