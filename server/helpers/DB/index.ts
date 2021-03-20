@@ -1,4 +1,4 @@
-import {MongoClient,Db} from 'mongodb'
+import { MongoClient, Db } from 'mongodb'
 class DBInstance {
 
     private static instance: Db

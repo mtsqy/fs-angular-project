@@ -1,6 +1,5 @@
 export const ping = (req: any, res: any) => {
     res.status(200).json('pong!');
-    console.log('wawa')
     res.end()
 }
 

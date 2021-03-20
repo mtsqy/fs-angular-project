@@ -1,0 +1,14 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+    npm i -D huskynt-config-airbnb"
+    ],
+    "jsRules": {},
+    "rules": {
+        "quotemark": [
+            true,
+            "single"
+        ]
+    },
+    "rulesDirectory": []
+}
