@@ -1,18 +1,13 @@
-import express,{ Application, Request, Response } from 'express'
-import bodyParser, { json } from 'body-parser'
-import { router } from '../routes/'
-class App {
-    app: any
-    constructor() {
-        this.app = express()
-        this._init()
-    } 
-    _init() {
-        this.app.use(bodyParser.json())
-        this.app.use(bodyParser.urlencoded({extended : true}))
-        this.app.use(json)
-        this.app.use(router)
-    }
-}
+import express, { Application, Request, Response } from 'express'
+import bodyParser, { json, urlencoded } from 'body-parser'
+import { api } from '../api/'
 
-export default App
+const cors = require('cors')
+const app = express()
+
+app.use(cors)
+app.use(json)
+app.use(urlencoded({extended: false}))
+app.use(api)
+
+export { app }
