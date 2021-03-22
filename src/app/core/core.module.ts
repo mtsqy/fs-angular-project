@@ -5,7 +5,7 @@ import { AuthenticationService } from 'src/app/core/services';
 import { httpInterceptProviders } from 'src/app/core/interceptors';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
-// import { AuthEffects } from 'src/app/store/effects/auth.effects';
+import { AuthEffects } from 'src/app/store/effects/auth.effects';
 import { reducer } from 'reducers';
 
 @NgModule({
@@ -14,7 +14,7 @@ import { reducer } from 'reducers';
     CommonModule,
     HttpClientModule,
     StoreModule.forRoot(reducer, {}),
-    // EffectsModule.forRoot([AuthEffects]),
+    EffectsModule.forRoot([AuthEffects]),
   ],
   providers: [AuthenticationService, httpInterceptProviders]
 })

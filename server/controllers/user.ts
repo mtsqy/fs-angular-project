@@ -1,10 +1,11 @@
-export const ping = (req: any, res: any) => {
+import { Handler, Request, Response } from 'express'
+
+export const ping = (Request: Request, res: Response) => {
     res.status(200).json('pong!');
     res.end()
 }
 
-
-export const login = (req: any, res: any, next: any) => {
+export const login = (req: Request, res: Response, next: Handler) => {
     if (req.body.email === 'test@test.com') {
         res.status(200).json({
           status: 'success',
@@ -17,7 +18,7 @@ export const login = (req: any, res: any, next: any) => {
     }
 }
 
-export const register = (req: any, res: any, next: any) => {
+export const register = (req: Request, res: Response, next: Handler) => {
     if (req.body.email === 'test@test.com') {
         res.status(201).json({
           status: 'success',

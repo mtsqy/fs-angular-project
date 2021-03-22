@@ -1,4 +1,6 @@
 import { MongoClient, Db } from 'mongodb'
+
+
 class DBInstance {
 
     private static instance: Db
@@ -20,3 +22,7 @@ class DBInstance {
 }
 
 export default DBInstance
+
+class MInstance {
+
+}
